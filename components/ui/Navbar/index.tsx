@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import NextLink from 'next/link'
-import { Link, Text, useTheme } from '@nextui-org/react'
+import { Button, Link, Text, useTheme } from '@nextui-org/react'
 import styles from './styles.module.scss'
 
 export const Navbar = () => {
@@ -13,7 +13,6 @@ export const Navbar = () => {
     >
       
       <div>
-        
         <Image src='/pokeball.png'
           alt="App Icon"
           width={35}
@@ -25,16 +24,15 @@ export const Navbar = () => {
             <Text color='white' h3>hiny Dex</Text>
           </Link>
         </NextLink>
-        
-        
+
+        <Button onClick={() => localStorage.removeItem("favorites")}>dsgsdf</Button>
       </div>
       
       <NextLink href="/favorites" passHref>
           <Link>
             <Text color='white' >Favoritos</Text>
-            
           </Link>
-        </NextLink>
+      </NextLink>
     </div>
   )
 }
