@@ -34,6 +34,13 @@ const PokemonPageName: NextPage<Props> = ({pokemon}) => {
         angle: -100,
         origin: { x: 1, y: 0 },
       })
+      confetti({
+        zIndex: 1,
+        particleCount: 100,
+        spread: 160,
+        angle: 0,
+        origin: { x: 0, y: 0,   },
+      })
     }
   }
 

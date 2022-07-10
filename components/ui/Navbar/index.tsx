@@ -24,8 +24,6 @@ export const Navbar = () => {
             <Text color='white' h3>hiny Dex</Text>
           </Link>
         </NextLink>
-
-        <Button onClick={() => localStorage.removeItem("favorites")}>dsgsdf</Button>
       </div>
       
       <NextLink href="/favorites" passHref>
