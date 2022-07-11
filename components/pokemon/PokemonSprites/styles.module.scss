@@ -1,0 +1,11 @@
+.card__header {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 500px) {
+  .card__header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
