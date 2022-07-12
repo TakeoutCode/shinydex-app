@@ -5,13 +5,13 @@ import { GetStaticProps, NextPage, GetStaticPaths } from "next";
 import { Grid } from '@nextui-org/react';
 
 import { Layout } from "../../components/layouts"
-import { Pokemon } from "../../interfaces";
+import { PokemonMedium } from "../../interfaces";
 import { getPokemonInfo, localFavorites } from "../../utils";
 import { PokemonSprites } from "../../components/pokemon/PokemonSprites";
 import { PokemonTypes } from "../../components/pokemon/PokemonTypes";
 
 interface Props {
-  pokemon: Pokemon;
+  pokemon: PokemonMedium;
 }
 
 const PokemonPage: NextPage<Props> = ({pokemon}) => {
