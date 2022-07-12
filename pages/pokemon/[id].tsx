@@ -9,6 +9,8 @@ import { PokemonMedium } from "../../interfaces";
 import { getPokemonInfo, localFavorites } from "../../utils";
 import { PokemonSprites } from "../../components/pokemon/PokemonSprites";
 import { PokemonTypes } from "../../components/pokemon/PokemonTypes";
+import { PokemonMoves } from "../../components/pokemon/PokemonMoves";
+import { PokemonStats } from "../../components/pokemon/PokemonStats";
 
 interface Props {
   pokemon: PokemonMedium;
@@ -26,6 +28,8 @@ const PokemonPage: NextPage<Props> = ({pokemon}) => {
       <Grid.Container css={{marginTop: '5px'}} gap={2}>
         <PokemonTypes pokemon={pokemon} />
         <PokemonSprites pokemon={pokemon} isInFavorites={isInFavorites} setIsInFavorites={setIsInFavorites} />
+        <PokemonStats pokemon={pokemon} />
+        <PokemonMoves pokemon={pokemon}/>
       </Grid.Container>
     </Layout>
   )
