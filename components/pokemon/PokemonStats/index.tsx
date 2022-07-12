@@ -1,9 +1,9 @@
 import { FC } from 'react';
 import { Card, Text, Grid, Progress } from '@nextui-org/react';
-import { Pokemon } from '../../../interfaces';
+import { Pokemon, PokemonMedium } from '../../../interfaces';
 
 interface Props {
-  pokemon: Pokemon;
+  pokemon: PokemonMedium;
 }
 export const PokemonStats: FC<Props> = ({pokemon}) => {
   return (

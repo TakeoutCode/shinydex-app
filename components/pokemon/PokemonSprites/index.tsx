@@ -6,10 +6,10 @@ import confetti from "canvas-confetti";
 
 import styles from './styles.module.scss'
 import { localFavorites } from '../../../utils';
-import { Pokemon } from '../../../interfaces';
+import { PokemonMedium } from '../../../interfaces';
 
 interface Props {
-  pokemon: Pokemon;
+  pokemon: PokemonMedium;
   isInFavorites: boolean;
   setIsInFavorites: (isInFavorites: boolean) => void;
 }
@@ -44,32 +44,32 @@ export const PokemonSprites: FC<Props> = ({pokemon,isInFavorites, setIsInFavorit
               <Button color="gradient" ghost={isInFavorites} onClick={onToggleFavorite}>{isInFavorites ? "remove from favorites" : "Save to favorites"  }</Button>
              
             </Card.Header>
-            <Card.Body>
-              <Text size={30}>Sprites:</Text>
-              <Container direction="row" display="flex" justify="space-around" alignItems="center" gap={0}>
+            <Card.Body css={{display: 'flex', justifyContent: 'center'}}>
+              <Text size={35} >Sprites:</Text>
+              <Container direction="row" display="flex" justify="space-around" alignItems="center"  gap={0}>
                 <Image 
                   src={pokemon.sprites.front_default} 
                   alt="Default Image" 
-                  width={120} 
-                  height={120} 
+                  width={150} 
+                  height={150} 
                 />
                 <Image 
                   src={pokemon.sprites.other?.dream_world.front_default || "ndf"} 
                   alt="Default Image" 
-                  width={120} 
-                  height={120} 
+                  width={150} 
+                  height={150} 
                 />
                 <Image 
                   src={pokemon.sprites.other?.["official-artwork"].front_default || "efewf"} 
                   alt="Default Image" 
-                  width={120} 
-                  height={120} 
+                  width={150} 
+                  height={150} 
                 />
                 <Image 
                   src={pokemon.sprites.other?.home.front_default || "efewf"} 
                   alt="Default Image" 
-                  width={120} 
-                  height={120} 
+                  width={150} 
+                  height={150} 
                 />
               </Container>
             </Card.Body>
